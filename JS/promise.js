@@ -62,3 +62,30 @@
 //           console.log('Some error has occurred'); 
 //       });
 
+// async await exmaplesss
+// const p = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("P is resolved")
+//     }, 2000);
+// })
+
+// async function handlePromise(){
+//     console.log("Hello World");
+//     const val = await p;
+//     console.log(val);
+//     console.log("Hii, i am rohit kumar")
+// }
+
+// handlePromise();
+
+// async await example using the callback function 
+
+const handlePromise = async () => {
+ let y = await "Hello world";
+    console.log(y);
+}
+
+console.log('1');
+handlePromise();
+console.log('2')
+
