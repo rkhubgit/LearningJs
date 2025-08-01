@@ -71,7 +71,7 @@
 // and both element registered to a handle event 
 // event  bubbling perform  the heirarchy
 // event bubbling target the innnermost element and propagate outer element 
-// event bubbling work on the botton to the top
+// event bubbling work on the bottom to the top
 
 
 
@@ -107,16 +107,6 @@
 // </body>
 
 
-
-
-
-
-
-
-
-
-
-
 // event capturing in js 
 // Event capturing in on the two way to do Event popagation in the HTML DOM API 
 // Event capturing opposite to the evetn bubbling 
@@ -124,3 +114,32 @@
 // Event cauturing target the outermost element 
 // Event capturing is rarely useed
 
+
+
+// call methods in javascript 
+
+let name = {
+    firstName: "Rohit",
+    lastName: "Kumar",
+
+
+}
+let  printFullName = function(homeTown, state){
+        console.log(this.firstName + " " + this.lastName + " from " + homeTown + " " + state);
+    }
+   
+printFullName("Nehtaur", "UttarPradesh");
+
+printFullName.call("Nehtaur", "UttarPradesh");
+
+let  fullName = {
+    firstName: "Shrish Raj",
+    lastName: "Gupta"
+}
+// function borrowing 
+printFullName.apply(fullName, ["Mandawar" , "Uttar Pradesh"])
+
+let printMyname = printFullName.bind(fullName, "Mandawar", "Uttar Pradesh")
+console.log(printMyname);
+
+printMyname();
