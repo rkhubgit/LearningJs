@@ -24,3 +24,16 @@
 
 
 // console.log(_myName);
+
+
+// 
+const str = 'qwertyuibvcxzasdfghjkkiertiiirewerfghb'
+
+let count = 0
+for(let i = str.length-1; i >= 0; i--){
+    if(str[i] === "i"){
+        count++
+    }
+}
+
+console.log(count)

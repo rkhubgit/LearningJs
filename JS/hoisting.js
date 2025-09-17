@@ -39,3 +39,46 @@ getName();
 console.log(x);
 // console.log(a);
 console.log(getName);
+
+
+
+// call  apply and bing methods
+
+let name = {
+    Fname: 'Rohit',
+    Lname: 'Kumar',
+
+    // printFullName: function(){
+    //     console.log(`${this.Fname} ${this.Lname}`)
+    // }
+}
+
+// name.printFullName();
+
+let printFullName = function (hometown, state){
+    console.log(`${this.Fname} ${this.Lname} from ${hometown} and state is ${state}`)
+}
+
+// call method
+printFullName.call(name, 'Nehtaur', 'Uttar Pradesh')
+
+
+let name2 = {
+    Fname: "Mohit",
+    Lname: 'Kumar', 
+
+
+}
+// call methods
+printFullName.call(name2, "Nehtaur", 'Uttar Pradesh')
+
+
+// apply method
+printFullName.apply(name2,[ "Nehtaur", 'Uttar Pradesh'])
+
+
+// bind method
+let printmyName = printFullName.bind(name, 'Nehtaur', 'Uttar pradesh')
+console.log(printmyName)
+
+printmyName();

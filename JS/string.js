@@ -247,3 +247,16 @@
 // console.log(txt.split(","));           // Split on commas
 // console.log( txt.split(" "));          // Split on spaces
 // console.log(txt.split("|"));         // Split on pipe
+
+let a = 5;
+
+const promise = new Promise((resolve, reject) => {
+    if(a % 2 === 0){
+        resolve('Promise are to be resolved')
+    }else{
+        reject('Promise are to be reject')
+    }
+})
+promise
+.then((message) => console.log(message))
+.catch((err) => console.log(err))
