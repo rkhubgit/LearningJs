@@ -9,6 +9,7 @@
 // the code
 
 
+
 //   The let and const Keywords
 
 // Variables defined with let and const are hoisted to the top of the block, but not initialized.
@@ -30,55 +31,35 @@
 // console.log(getName);
 // console.log(a);
 
-let x = 7;
-function getName(){
-    console.log('Rohit Kumar');
-    var a = 8;
-}
-getName();
-console.log(x);
-// console.log(a);
-console.log(getName);
+// let x = 7;
+// function getName(){
+//     console.log('Rohit Kumar');
+//     var a = 8;
+// }
+// getName();
+// console.log(x);
+// // console.log(a);
+// console.log(getName);
 
 
 
 // call  apply and bing methods
 
-let name = {
-    Fname: 'Rohit',
-    Lname: 'Kumar',
 
-    // printFullName: function(){
-    //     console.log(`${this.Fname} ${this.Lname}`)
-    // }
-}
+// let emp = {
+//     name:"rohit kumar",
+//     role: 'fullstack developer'
+// }
 
-// name.printFullName();
+// const printmyName = function(home){
+//     console.log(` your full name is ${this.name} and your role is ${this.role} and your home is ${home}`)
+// }
 
-let printFullName = function (hometown, state){
-    console.log(`${this.Fname} ${this.Lname} from ${hometown} and state is ${state}`)
-}
+// printmyName.call(emp, 'Nehtaur')
 
-// call method
-printFullName.call(name, 'Nehtaur', 'Uttar Pradesh')
+// printmyName.apply(emp, ['Bijnor'])
 
+// let printData = printmyName.bind(emp, 'Mandawar')
 
-let name2 = {
-    Fname: "Mohit",
-    Lname: 'Kumar', 
+// printData()
 
-
-}
-// call methods
-printFullName.call(name2, "Nehtaur", 'Uttar Pradesh')
-
-
-// apply method
-printFullName.apply(name2,[ "Nehtaur", 'Uttar Pradesh'])
-
-
-// bind method
-let printmyName = printFullName.bind(name, 'Nehtaur', 'Uttar pradesh')
-console.log(printmyName)
-
-printmyName();

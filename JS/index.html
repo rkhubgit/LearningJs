@@ -1,11 +1,184 @@
+
+
+
+<!-- event capturing  -->
+
+
+
 <!-- <!DOCTYPE html>
 <html>
-    <head>
-        <title>Documet</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <button id="clickMe">Click Me</button>
-        <script src="blockscope.js"></script>
-    </body>
+
+<head>   
+    <style>
+        div {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h2 {
+            color: black;
+        }
+        #grandparent {
+            background-color: green;
+            width: 300px;
+            height: 300px;
+        }
+        #parent {
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+        }
+        #child {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Welcome To GFG</h2>
+        <div id="grandparent">GrandParent
+            <div id="parent">Parent
+                <div id="child"> Child</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const grandParent = document.getElementById("grandparent");
+        const parent = document.getElementById("parent");
+        const child = document.getElementById("child");
+        
+        document.addEventListener("click", (e) => {
+            console.log("Document capturing");
+        }, { capture: true });
+        
+        grandParent.addEventListener("click", (e) => {
+            console.log("GrandParent capturing");
+        }, { capture: true });
+        
+        parent.addEventListener("click", (e) => {
+            console.log("Parent capturing");
+        }, { capture: true });
+        
+        child.addEventListener("click", (e) => {
+            console.log("Child capturing");
+        }, { capture: true });
+          document.addEventListener("click", (e) => {
+            console.log("Document bubbling");
+        }, { capture: false });
+        
+        grandParent.addEventListener("click", (e) => {
+            console.log("GrandParent bubbling");
+        }, { capture: false });
+        
+        parent.addEventListener("click", (e) => {
+            console.log("Parent bubbling");
+        }, { capture: false });
+        
+        child.addEventListener("click", (e) => {
+            console.log("Child bubbling");
+        }, { capture: false });
+    </script>
+</body>
+
 </html> -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src=
+"https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <style>
+        div {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h2 {
+            color: black;
+        }
+        #grandparent {
+            background-color: green;
+            width: 300px;
+            height: 300px;
+        }
+        #parent {
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+        }
+        #child {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Welcome To GFG</h2>
+        <div id="grandparent">GrandParent
+            <div id="parent">Parent
+                <div id="child">Child</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const grandParent = document.getElementById("grandparent");
+        const parent = document.getElementById("parent");
+        const child = document.getElementById("child");
+
+        grandParent.addEventListener("click", (e) => {
+            console.log("GrandParent");
+        }, { capture: false });
+        parent.addEventListener("click", (e) => {
+            console.log("Parent");
+        }, { capture: false });
+        child.addEventListener("click", (e) => {
+            console.log("Child");
+        }, { capture: false });
+    </script>
+</body>
+</html> 
+
+-->
+
+
+<!-- Event Delegation  -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation Corrected</title>
+</head>
+<body>
+    <div>
+        <ul id="category">
+            <li>Mobile</li>
+            <li>Laptop</li>
+            <li>Tablet</li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('category').addEventListener('click', (e) => {
+            console.log(e.target.innerText);   // FIXED
+        });
+    </script>
+</body>
+</html>

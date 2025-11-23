@@ -1,11 +1,13 @@
 //          VAR VS LET VS CONST
 
-//    VAR                                        LET                                        CONST
-// 1. function scope                             Block scope                                Block scope
-// 2. can be re-declare                          can't be re-declare                        can't be re-declare 
-// 3. can be re-initialze                        can be re-intialize                        can be re-intialize 
-// 4. can be re-assigned                         can be re-assigned                         can be re-assigned
-// 
+//                 VAR                                LET                                   CONST
+
+// 1. Scope:       Function Scope                      Block Scope                            Block Scope
+// 2. Re-declare:  Can be re-declared                  Cannot be re-declared                   Cannot be re-declared
+// 3. Re-assign:   Can be re-assigned                  Can be re-assigned                      Cannot be re-assigned
+// 4. Initialize:  Can be declared without value        Can be declared without value           Must be initialized at declaration
+// 5. Hoisting:    Hoisted (initialized as undefined)   Hoisted but in TDZ (error if accessed)  Hoisted but in TDZ (error if accessed)
+
 
 // var myName = "thapa technical";
 // console.log(myName);
